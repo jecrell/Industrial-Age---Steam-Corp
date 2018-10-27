@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 // ReSharper disable RedundantJumpStatement
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public static class WaterConnectionMaker
 	{

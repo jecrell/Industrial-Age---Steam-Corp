@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public class WaterNetGrid : MapComponent
 	{

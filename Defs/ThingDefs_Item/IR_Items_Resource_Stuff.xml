@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="EstateResourceBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Estate_Coal</defName>
     <label>coal</label>
     <description>Doesn't look too nice, but it's good generator fuel.</description>
@@ -11,6 +11,7 @@
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
+	  <Mass>0.1</Mass>
       <MarketValue>2.0</MarketValue>
 	  <MaxHitPoints>150</MaxHitPoints>
 	  <Flammability>1.0</Flammability>
@@ -22,7 +23,7 @@
 	 <stackLimit>500</stackLimit>
   </ThingDef>
   
-  <ThingDef ParentName="EstateResourceBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Estate_Copper</defName>
     <label>copper</label>
     <description>It is a soft, malleable, and ductile metal with very high thermal and electrical conductivity -- used for building structures, tools, and weapons.</description>
@@ -34,8 +35,8 @@
     <soundInteract>Metal_Drop</soundInteract>
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
+	  <Mass>0.2</Mass>
       <MarketValue>1.2</MarketValue>
-      <Mass>0.3</Mass>
       <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
       <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
     </statBases>
@@ -44,7 +45,6 @@
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
-    <deepCommonality>1</deepCommonality>
     <stuffProps>
       <categories>
         <li>Metallic</li>

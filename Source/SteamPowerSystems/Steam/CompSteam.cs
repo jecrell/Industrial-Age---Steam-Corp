@@ -8,7 +8,7 @@ using Verse.Sound;
 
 // ReSharper disable RedundantJumpStatement
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public abstract class CompSteam : ThingComp
 	{

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class PlaceWorker_SteamPipe : PlaceWorker
     {

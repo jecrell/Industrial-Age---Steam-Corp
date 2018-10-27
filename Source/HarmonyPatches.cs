@@ -7,7 +7,7 @@ using Verse;
 using RimWorld;
 using UnityEngine;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     [StaticConstructorOnStartup]
     public static class HarmonyPatches
@@ -25,7 +25,7 @@ namespace ArkhamEstate
                     .Add(ThingDef.Named("Estate_SteamDrivePlant"));
             }
             
-            HarmonyInstance harmony = HarmonyInstance.Create("jecrell.arkhamestate");
+            HarmonyInstance harmony = HarmonyInstance.Create("jecrell.IndustrialAgeSteamCorp");
             harmony.Patch(AccessTools.Method(typeof(BuildableDef), "ForceAllowPlaceOver"),
                 null,
                 new HarmonyMethod(AccessTools.Method(typeof(HarmonyPatches), nameof(Chandeliers_ForceAllowPlaceOver))));

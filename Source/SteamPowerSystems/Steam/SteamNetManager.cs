@@ -2,7 +2,7 @@
 using System.Linq;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public class SteamNetManager : MapComponent
 	{

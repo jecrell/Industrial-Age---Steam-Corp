@@ -2,11 +2,11 @@
 <Defs>
 
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_SteamConduit</defName>
     <label>steam pipes</label>
     <thingClass>Building</thingClass>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
     <graphicData>
       <texPath>Things/Building/Linked/mrXuiryusSteampipe_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -42,13 +42,13 @@
       <Steel>1</Steel>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Steam">
-        <compClass>ArkhamEstate.CompSteamTransmitter</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Steam">
+        <compClass>IndustrialAgeSteamCorp.CompSteamTransmitter</compClass>
         <transmitsSteam>true</transmitsSteam>
       </li>
     </comps>
     <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_SteamPipe</li>
+      <li>IndustrialAgeSteamCorp.PlaceWorker_SteamPipe</li>
     </placeWorkers>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
@@ -64,11 +64,11 @@
     </researchPrerequisites>
   </ThingDef>
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_SteamValve</defName>
     <label>steam valve</label>
     <thingClass>Building_PowerSwitch</thingClass>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
     <description>Switches steam on/off.</description>
     <graphicData>
       <texPath>Things/Building/Power/mrXuiryusSteamValve</texPath>
@@ -101,8 +101,8 @@
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Steam">
-        <compClass>ArkhamEstate.CompSteamTransmitter</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Steam">
+        <compClass>IndustrialAgeSteamCorp.CompSteamTransmitter</compClass>
         <transmitsSteam>true</transmitsSteam>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -119,10 +119,11 @@
     </researchPrerequisites>
   </ThingDef>
   
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_Accumulator</defName>
     <label>steam accumulator</label>
-    <thingClass>ArkhamEstate.Building_SteamTank</thingClass>
+    <thingClass>IndustrialAgeSteamCorp.Building_SteamTank</thingClass>
+	<thingCategories><li>Buildings</li></thingCategories>
     <graphicData>
       <texPath>Things/Building/Power/mrXuiryusSteamCondenser</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -160,7 +161,7 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_SteamTank">
+      <li Class="IndustrialAgeSteamCorp.CompProperties_SteamTank">
         <storedSteamMax>200</storedSteamMax>
 		<baseSteamConsumption>0</baseSteamConsumption>
         <efficiency>0.5</efficiency>
@@ -188,10 +189,12 @@
 
 
     <!-- Fueled Generator -->
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_SteamGenerator</defName>
     <label>steam boiler</label>
-    <thingClass>ArkhamEstate.Building_Boiler</thingClass>
+    <thingClass>IndustrialAgeSteamCorp.Building_Boiler</thingClass>
+	<thingCategories><li>BuildingsPower</li></thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <graphicData>
       <texPath>Things/Building/Power/mrXuiryusSteamGenerator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -223,8 +226,8 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Steam">
-        <compClass>ArkhamEstate.CompSteamGenerator</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Steam">
+        <compClass>IndustrialAgeSteamCorp.CompSteamGenerator</compClass>
 		<baseSteamConsumption>-200</baseSteamConsumption>
         <baseWaterConsumption>200</baseWaterConsumption>
 		<ticksOnTime>
@@ -235,7 +238,7 @@
 		<toxicGasGenPct>0.2</toxicGasGenPct>
         <transmitsSteam>true</transmitsSteam>
       </li>
-      <li Class="ArkhamEstate.CompProperties_WaterTank">
+      <li Class="IndustrialAgeSteamCorp.CompProperties_WaterTank">
         <storedWaterMax>2300</storedWaterMax>
         <efficiency>0.5</efficiency>
         <transmitsWater>true</transmitsWater>
@@ -281,10 +284,12 @@
     </researchPrerequisites>
   </ThingDef> 
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_SteamStacks</defName>
     <label>steam stack</label>
     <thingClass>Building</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories><li>BuildingsPower</li></thingCategories>
     <graphicData>
       <texPath>Things/Building/Power/mrXuiryusSteamStack</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -318,8 +323,8 @@
       <Steel>100</Steel>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Steam">
-        <compClass>ArkhamEstate.CompSteamTrader</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Steam">
+        <compClass>IndustrialAgeSteamCorp.CompSteamTrader</compClass>
         <transmitsSteam>true</transmitsSteam>
 		<ticksOnTime>
 		  <min>90</min>
@@ -350,10 +355,12 @@
   </ThingDef> 
 
   
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_SteamElectricGenerator</defName>
     <label>steam electric plant</label>
     <thingClass>Building</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories><li>BuildingsPower</li></thingCategories>
     <graphicData>
       <texPath>Things/Building/Power/jecSteamPowerPlantCopper</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -371,6 +378,7 @@
     <castEdgeShadows>false</castEdgeShadows>
     <rotatable>false</rotatable>
     <statBases>
+	  <Mass>100</Mass>
       <MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>2500</WorkToBuild>
       <Flammability>1.0</Flammability>
@@ -384,7 +392,7 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_SteamTank">
+      <li Class="IndustrialAgeSteamCorp.CompProperties_SteamTank">
         <baseSteamConsumption>100</baseSteamConsumption>
         <storedSteamMax>200</storedSteamMax>
         <efficiency>0.5</efficiency>
@@ -399,7 +407,7 @@
 		<soundAmbientSteamed>Estate_SteamElectricPlantLoop</soundAmbientSteamed>
       </li>
       <li Class="CompProperties_Power">
-        <compClass>ArkhamEstate.CompSteamElectricPlant</compClass>
+        <compClass>IndustrialAgeSteamCorp.CompSteamElectricPlant</compClass>
         <basePowerConsumption>-1000</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
       </li>
@@ -426,9 +434,11 @@
   </ThingDef>
   
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_SteamDrivePlant</defName>
     <label>steam drive plant</label>
+	<thingClass>Building</thingClass>
+	<thingCategories><li>BuildingsPower</li></thingCategories>
     <graphicData>
       <texPath>Things/Building/Power/SteamDrivePlantCopper</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -463,8 +473,8 @@
         </statOffsets>
         <maxSimultaneous>2</maxSimultaneous>
       </li>
-      <li Class="ArkhamEstate.CompProperties_Steam">
-        <compClass>ArkhamEstate.CompSteamTrader</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Steam">
+        <compClass>IndustrialAgeSteamCorp.CompSteamTrader</compClass>
         <transmitsSteam>true</transmitsSteam>
 		<ticksOnTime>200</ticksOnTime>
 		<ticksOffTime>1000</ticksOffTime>

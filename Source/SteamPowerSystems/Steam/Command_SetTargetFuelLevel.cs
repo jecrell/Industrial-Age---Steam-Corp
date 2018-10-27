@@ -4,7 +4,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     [StaticConstructorOnStartup]
     public class Command_SetTargetFuelLevel : Command

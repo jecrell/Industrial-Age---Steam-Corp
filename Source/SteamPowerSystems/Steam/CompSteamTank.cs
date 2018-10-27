@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public class CompSteamTank : CompSteam, ILeakable, IVentable
 	{

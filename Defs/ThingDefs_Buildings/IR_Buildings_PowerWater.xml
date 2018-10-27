@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_WaterConduit</defName>
     <label>raw water pipes</label>
     <description>Transfers unexamined, potentially non-potable water. This water can be used to create steam when the pipe connects a water source to a steam boiler. Raw water pipes can also connect to steam powered buildings to transfer return water and prevent spillages.</description>
     <thingClass>Building</thingClass>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
     <graphicData>
       <texPath>Things/Building/Linked/mrXuiryusWaterpipe_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -41,13 +41,13 @@
       <Steel>1</Steel>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Water">
-        <compClass>ArkhamEstate.CompWaterTransmitter</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Water">
+        <compClass>IndustrialAgeSteamCorp.CompWaterTransmitter</compClass>
         <transmitsWater>true</transmitsWater>
       </li>
     </comps>
     <placeWorkers>
-      <li>ArkhamEstate.PlaceWorker_WaterPipe</li>
+      <li>IndustrialAgeSteamCorp.PlaceWorker_WaterPipe</li>
     </placeWorkers>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
@@ -62,11 +62,13 @@
     </researchPrerequisites>
   </ThingDef>
   
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_WaterPump</defName>
     <label>raw water pump</label>
     <description>Produces raw unfiltered water by pulling it up from a nearby water source.</description>
     <thingClass>Building</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<thingCategories><li>BuildingsPower</li></thingCategories>
     <graphicData>
       <texPath>Things/Building/Power/jecWaterPump</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -87,6 +89,7 @@
     <castEdgeShadows>false</castEdgeShadows>
     <rotatable>true</rotatable>
     <statBases>
+	  <Mass>30</Mass>
       <MaxHitPoints>300</MaxHitPoints>
       <WorkToBuild>2500</WorkToBuild>
       <Flammability>1.0</Flammability>
@@ -102,8 +105,8 @@
 	  <soundAmbient>Estate_WaterPumpAmbience</soundAmbient>	  
 	</building>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Water">
-        <compClass>ArkhamEstate.CompWaterPlant</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Water">
+        <compClass>IndustrialAgeSteamCorp.CompWaterPlant</compClass>
         <baseWaterConsumption>-7600</baseWaterConsumption>
         <transmitsWater>true</transmitsWater>
       </li>
@@ -114,7 +117,7 @@
     <designationCategory>Power</designationCategory>
     <constructEffect>ConstructMetal</constructEffect>
     <placeWorkers>
-	  <li>ArkhamEstate.PlaceWorker_WaterPump</li>
+	  <li>IndustrialAgeSteamCorp.PlaceWorker_WaterPump</li>
 	</placeWorkers>
 	<researchPrerequisites>
       <li>Industrial_SteamPower</li>
@@ -122,10 +125,11 @@
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
   </ThingDef>
 
-  <ThingDef ParentName="EstateBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Estate_WaterTank</defName>
     <label>raw water tank</label>
-    <thingClass>ArkhamEstate.Building_WaterTank</thingClass>
+    <thingClass>IndustrialAgeSteamCorp.Building_WaterTank</thingClass>
+	<thingCategories><li>BuildingsPower</li></thingCategories>
     <description>Stores raw (unfiltered) water when there is excess and yields it when there is not.</description>
     <graphicData>
       <texPath>Things/Building/Power/jecWaterTower</texPath>
@@ -170,7 +174,7 @@
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_WaterTank">
+      <li Class="IndustrialAgeSteamCorp.CompProperties_WaterTank">
         <storedWaterMax>23000</storedWaterMax>
         <efficiency>0.5</efficiency>
         <transmitsWater>true</transmitsWater>

@@ -3,8 +3,9 @@
 
   <!-- ========================= Work tables ==========================-->
   
-  <ThingDef ParentName="EstateBenchBase" Name="Estate_DrillBase" Abstract="True">
-    <thingClass>ArkhamEstate.Building_Drill</thingClass>
+  <ThingDef ParentName="BenchBase" Name="Estate_DrillBase" Abstract="True">
+    <thingClass>IndustrialAgeSteamCorp.Building_Drill</thingClass>
+	<thingCategories />
     <tickerType>Normal</tickerType>
     <staticSunShadowHeight>0.0</staticSunShadowHeight>
 	<castEdgeShadows>false</castEdgeShadows>
@@ -58,7 +59,7 @@
     </costList>
     <placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
-	  <li>ArkhamEstate.PlaceWorker_OnCoalVein</li>
+	  <li>IndustrialAgeSteamCorp.PlaceWorker_OnCoalVein</li>
 	</placeWorkers>
 	<comps>
 	  <li Class="CompOverlays.CompProperties_Overlays">
@@ -99,7 +100,7 @@
 		</graphicData>
 	<placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
-	  <li>ArkhamEstate.PlaceWorker_OnCopperVein</li>
+	  <li>IndustrialAgeSteamCorp.PlaceWorker_OnCopperVein</li>
 	</placeWorkers>
 	<comps>
 	  <li Class="CompOverlays.CompProperties_Overlays">
@@ -176,7 +177,7 @@
     <uiIconPath>Things/Building/Production/mrXuiryusDrillBrassAdvanced_MenuIcon</uiIconPath>
 	<placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
-	  <li>ArkhamEstate.PlaceWorker_OnCopperVein</li>
+	  <li>IndustrialAgeSteamCorp.PlaceWorker_OnCopperVein</li>
 	</placeWorkers>
 	</ThingDef>
  
@@ -216,7 +217,7 @@
 	  </comps>
 	<placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
-	  <li>ArkhamEstate.PlaceWorker_OnCoalVein</li>
+	  <li>IndustrialAgeSteamCorp.PlaceWorker_OnCoalVein</li>
 	</placeWorkers>
 	</ThingDef>
 

@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     [StaticConstructorOnStartup]
     internal class TexButton

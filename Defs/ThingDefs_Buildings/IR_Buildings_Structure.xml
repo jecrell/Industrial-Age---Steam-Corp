@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="EstateBuildingBase" Name="PlatedWall">
+  <ThingDef ParentName="BuildingBase" Name="PlatedWall">
     <defName>Estate_PlatedWall</defName>
     <label>plated wall</label>
     <thingClass>Building</thingClass>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
     <description>An impassable wall. Capable of holding up a roof.</description>
     <graphicData>
       <texPath>Things/Building/Linked/mrXuiryusWall_Atlas_Plated</texPath>
@@ -55,9 +55,6 @@
       <li>Metallic</li>
     </stuffCategories>
     <building>
-      <blueprintGraphicData>
-        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
-      </blueprintGraphicData>
       <isInert>true</isInert>
     </building>
     <damageMultipliers>
@@ -73,7 +70,7 @@
     <defName>Estate_PolishedWall</defName>
     <label>plated wall (polished)</label>
     <thingClass>Building</thingClass>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
     <description>An impassable wall. Capable of holding up a roof.</description>
     <graphicData>
       <texPath>Things/Building/Linked/mrXuiryusWall_Atlas_Polished</texPath>
@@ -94,9 +91,6 @@
         <edgeRight>Damage/Edge</edgeRight>
       </damageData>
     </graphicData>
-    <blueprintGraphicData>
-      <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
-    </blueprintGraphicData>
     <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <statBases>
       <MaxHitPoints>400</MaxHitPoints>

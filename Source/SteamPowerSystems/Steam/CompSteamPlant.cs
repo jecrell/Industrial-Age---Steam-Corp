@@ -1,5 +1,5 @@
 ﻿using RimWorld;
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class CompSteamPlant : CompSteamTrader
     {

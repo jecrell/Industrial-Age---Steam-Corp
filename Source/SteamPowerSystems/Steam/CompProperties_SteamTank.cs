@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class CompProperties_SteamTank : CompProperties_Steam
     {

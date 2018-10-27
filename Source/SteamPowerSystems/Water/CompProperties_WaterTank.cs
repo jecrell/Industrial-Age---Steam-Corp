@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using UnityEngine;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class CompProperties_WaterTank : CompProperties_Water
     {

@@ -1,4 +1,4 @@
-﻿namespace ArkhamEstate
+﻿namespace IndustrialAgeSteamCorp
 {
     public interface IVentable
     {

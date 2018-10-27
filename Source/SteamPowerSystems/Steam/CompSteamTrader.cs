@@ -4,7 +4,7 @@ using RimWorld;
 using Verse;
 using Verse.Sound;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public class CompSteamTrader : CompSteam
 	{

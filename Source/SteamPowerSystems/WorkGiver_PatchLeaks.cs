@@ -4,7 +4,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public class WorkGiver_PatchLeaks : WorkGiver_Scanner
 	{

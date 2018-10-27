@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using RimWorld;
+using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     [StaticConstructorOnStartup]
     public static class SteamOverlayMats
@@ -14,7 +15,7 @@ namespace ArkhamEstate
                 graphicData.graphicClass = typeof(Graphic_Single);
                 graphicData.texPath = "Things/Special/Power/Estate_SteamTransmitterAtlas";
                 graphicData.linkFlags = LinkFlags.Custom2;
-                graphicData.shaderType = ShaderType.MetaOverlay;
+                graphicData.shaderType = ShaderTypeDefOf.MetaOverlay;
                 Estate_SteamAtlasGraphic = graphicData.Graphic;
             }
             Graphic graphic = Estate_SteamAtlasGraphic;

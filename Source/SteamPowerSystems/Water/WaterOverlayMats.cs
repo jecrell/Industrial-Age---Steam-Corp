@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using RimWorld;
+using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     [StaticConstructorOnStartup]
     public static class WaterOverlayMats
@@ -14,7 +15,7 @@ namespace ArkhamEstate
                 graphicData.graphicClass = typeof(Graphic_Single);
                 graphicData.texPath = "Things/Special/Power/Estate_WaterTransmitterAtlas";
                 graphicData.linkFlags = LinkFlags.Custom1;
-                graphicData.shaderType = ShaderType.MetaOverlay;
+                graphicData.shaderType = ShaderTypeDefOf.MetaOverlay;
                 Estate_WaterAtlasGraphic = graphicData.Graphic;
             }
             Graphic graphic = Estate_WaterAtlasGraphic;

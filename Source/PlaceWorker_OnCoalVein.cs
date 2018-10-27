@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class PlaceWorker_OnCoalVein : PlaceWorker
     {

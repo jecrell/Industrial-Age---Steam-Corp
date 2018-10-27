@@ -2,7 +2,7 @@
 using System.Linq;
 using RimWorld;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class CompSteamElectricPlant : CompPowerTrader
     {

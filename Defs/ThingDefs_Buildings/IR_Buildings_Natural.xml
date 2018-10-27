@@ -1,17 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-  <ThingDef Name="EstateBuildingNaturalBase" Abstract="True">
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
-    <selectable>true</selectable>
-    <drawerType>MapMeshOnly</drawerType>
-    <filthLeaving>Filth_RubbleRock</filthLeaving>
-		<scatterableOnMapGen>false</scatterableOnMapGen>
-	</ThingDef>
-
-
-  <ThingDef ParentName="EstateBuildingNaturalBase">
+  <ThingDef ParentName="BuildingNaturalBase">
     <defName>Estate_VeinCoal</defName>
     <thingClass>Building</thingClass>
     <label>coal vein</label>
@@ -41,7 +31,7 @@
     </building>
   </ThingDef>
   
-  <ThingDef ParentName="EstateBuildingNaturalBase">
+  <ThingDef ParentName="BuildingNaturalBase">
     <defName>Estate_VeinCopper</defName>
     <thingClass>Building</thingClass>
     <label>copper vein</label>
@@ -74,11 +64,10 @@
   <!-- GenStep for Veins -->
   <GenStepDef>
     <defName>Estate_VeinCoal</defName>
-    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>498</order>
     <genStep Class="GenStep_ScatterThings">
       <thingDef>Estate_VeinCoal</thingDef>
-			<allowOnWater>false</allowOnWater>
+			<allowInWaterBiome>false</allowInWaterBiome>
 			<minSpacing>25</minSpacing>
       <extraNoBuildEdgeDist>4</extraNoBuildEdgeDist>
       <countPer10kCellsRange>
@@ -104,11 +93,10 @@
 
   <GenStepDef>
     <defName>Estate_VeinCopper</defName>
-    <linkWithMapGenerator>BasicMap</linkWithMapGenerator>
     <order>499</order>
     <genStep Class="GenStep_ScatterThings">
       <thingDef>Estate_VeinCopper</thingDef>
-			<allowOnWater>false</allowOnWater>
+			<allowInWaterBiome>false</allowInWaterBiome>
 			<minSpacing>25</minSpacing>
       <extraNoBuildEdgeDist>4</extraNoBuildEdgeDist>
       <countPer10kCellsRange>

@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class Building_Drill : Building_WorkTable_HeatPush
     {
@@ -17,13 +17,13 @@ namespace ArkhamEstate
 
         private int FilthRate => IsEfficient ? 500 : 120;
         
-        private ThingDef FilthDef => Vein.def.defName == "Estate_VeinCoal" ? ThingDefOf.FilthAsh : ThingDefOf.FilthDirt;
+        private ThingDef FilthDef => Vein.def.defName == "Estate_VeinCoal" ? ThingDefOf.Filth_Ash : ThingDefOf.Filth_Dirt;
         
         private int lastStartedTick = -1;
         private int lastUsedTick = -1;
         private Effecter effecter = null;
 
-        public override bool UsableNow => !Vein?.DestroyedOrNull() ?? false;
+        //public override bool UsableNow => !Vein?.DestroyedOrNull() ?? false;
 
         public override void Tick()
         {
@@ -44,7 +44,7 @@ namespace ArkhamEstate
             lastUsedTick = Find.TickManager.TicksGame;
             if (effecter == null)
             {
-                EffecterDef effecterDef = EffecterDef.Named("Drill");
+                EffecterDef effecterDef = DefDatabase<EffecterDef>.GetNamedSilentFail("Drill");
                 if (effecterDef == null)
                 {
                     return;

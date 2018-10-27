@@ -4,7 +4,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
 	public class CompWaterTank : CompWater, ILeakable, IVentable
 	{
@@ -234,7 +234,7 @@ namespace ArkhamEstate
 			foreach (var c in parent.OccupiedRect())
 			{
 				MoteMaker.ThrowAirPuffUp(c.ToVector3(), this.parent.Map);
-				FilthMaker.MakeFilth(c, parent.MapHeld, ThingDefOf.FilthSlime);
+				FilthMaker.MakeFilth(c, parent.MapHeld, ThingDefOf.Filth_Slime);
 			}
 			SoundDef.Named("Estate_SteamHiss").PlayOneShot(new TargetInfo(this.parent.Position, this.parent.Map, false));
 			SetStoredWaterPct(0f);

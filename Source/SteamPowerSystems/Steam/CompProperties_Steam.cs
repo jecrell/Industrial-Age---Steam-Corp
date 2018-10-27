@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace ArkhamEstate
+namespace IndustrialAgeSteamCorp
 {
     public class CompProperties_Steam : CompProperties
     {

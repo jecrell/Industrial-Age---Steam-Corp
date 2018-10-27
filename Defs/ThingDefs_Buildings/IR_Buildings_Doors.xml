@@ -4,48 +4,7 @@
 
   <!--========================= Doors =============================-->
 
-  <ThingDef ParentName="EstateBuildingBase" Name="EstateDoorBase" Abstract="True">
-    <thingClass>Building_Door</thingClass>
-    <blueprintClass>Blueprint_Door</blueprintClass>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
-    <altitudeLayer>DoorMoveable</altitudeLayer>
-    <fillPercent>1</fillPercent>
-    <useHitPoints>true</useHitPoints>
-    <statBases>
-      <MaxHitPoints>250</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-    <rotatable>false</rotatable>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Structure</designationCategory>
-    <holdsRoof>true</holdsRoof>
-    <staticSunShadowHeight>1.0</staticSunShadowHeight>
-    <blockLight>true</blockLight>
-    <drawerType>RealtimeOnly</drawerType>
-    <building>    
-	  <blueprintGraphicData>
-        <texPath>Things/Building/Door/Door_Blueprint</texPath>
-      </blueprintGraphicData>
-	  <isInert>true</isInert>
-	  <canPlaceOverWall>true</canPlaceOverWall>
-      <soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
-      <soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
-      <soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
-      <soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
-    </building>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-    </comps>
-		<placeWorkers>
-			<li>PlaceWorker_DoorLearnOpeningSpeed</li>
-		</placeWorkers>
-  </ThingDef>
-
-  <ThingDef ParentName="EstateDoorBase">
+  <ThingDef ParentName="DoorBase">
     <defName>Estate_DoorIndustrial</defName>
     <label>industrial door</label>
     <description>Fashioned out of riveted metals. Divides rooms. Must be manually opened and closed, which slows people down.</description>
@@ -91,8 +50,8 @@
     </costList>
     <costStuffCount>20</costStuffCount>
     <comps>
-      <li Class="ArkhamEstate.CompProperties_Steam">
-        <compClass>ArkhamEstate.CompSteamTrader</compClass>
+      <li Class="IndustrialAgeSteamCorp.CompProperties_Steam">
+        <compClass>IndustrialAgeSteamCorp.CompSteamTrader</compClass>
         <baseSteamConsumption>50</baseSteamConsumption>
       </li>
       <li Class="CompProperties_Breakdownable"/>
